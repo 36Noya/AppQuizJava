@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <ImageView
+        android:id="@+id/ivLogoLogin"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/quiz_app_logo"
+
+        app:layout_constraintBottom_toTopOf="@+id/ilUsername"
+
+        app:layout_constraintHeight_percent="0.3"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.7" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/ilUsername"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:hint="@string/username"
+
+        app:endIconMode="clear_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        app:layout_constraintWidth_percent="0.7"
+        app:startIconDrawable="@drawable/ic_user"
+        app:startIconTint="@color/dark_blue">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:maxLines="1"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/ilPassword"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+
+        android:hint="@string/password"
+        app:endIconMode="password_toggle"
+
+        app:layout_constraintEnd_toEndOf="@id/ilUsername"
+        app:layout_constraintStart_toStartOf="@id/ilUsername"
+        app:layout_constraintTop_toBottomOf="@id/ilUsername"
+        app:layout_constraintWidth_percent="0.7"
+        app:startIconDrawable="@drawable/ic_password"
+        app:startIconTint="@color/dark_blue">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:inputType="textPassword"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        app:layout_constraintWidth_percent="0.7"
+
+        android:text="Login"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/ilPassword"
+        app:layout_constraintStart_toStartOf="@+id/ilPassword"
+        app:layout_constraintTop_toBottomOf="@+id/ilPassword" />
+
+
+    <Button
+        android:id="@+id/btnSkip"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        style="?attr/materialButtonOutlinedStyle"
+        android:textColor="@color/dark_yellow"
+        android:textStyle="bold"
+        app:strokeColor="@color/dark_yellow"
+        app:layout_constraintWidth_percent="0.325"
+        android:layout_marginTop="10dp"
+
+        android:text="Skip"
+
+        app:layout_constraintStart_toStartOf="@+id/btnLogin"
+        app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
+
+    <Button
+        android:id="@+id/btnDaftar"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="0dp"
+
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Daftar"
+        android:textColor="@color/dark_green"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/btnLogin"
+
+        app:layout_constraintTop_toBottomOf="@+id/btnLogin"
+
+        app:layout_constraintWidth_percent="0.325"
+        app:strokeColor="@color/dark_green" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
